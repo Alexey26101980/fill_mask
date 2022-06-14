@@ -12,7 +12,6 @@ print(unmasker("I am a [MASK].")[0]["sequence"])
 class Item(BaseModel):
     text: str
 
-
 app = FastAPI()
 
 
