@@ -1,6 +1,5 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
-fastapi~=0.78.0
+fastapi
 uvicorn
-transformers~=4.14.1
+transformers
 torch
-pydantic~=1.9.1
