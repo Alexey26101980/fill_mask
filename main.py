@@ -9,8 +9,6 @@ unmasker = pipeline("fill-mask", model="albert-base-v2")
 print(unmasker("I am a [MASK].")[0]["sequence"])
 
 
-
-
 class Item(BaseModel):
     text: str
 
