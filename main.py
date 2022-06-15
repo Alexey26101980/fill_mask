@@ -9,9 +9,9 @@ unmasker = pipeline("fill-mask", model="albert-base-v2")
 print(unmasker("I am a [MASK].")[0]["sequence"])
 
 
-
 class Item(BaseModel):
     text: str
+
 
 app = FastAPI()
 
@@ -19,6 +19,7 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {"message": "All right, there is a connection."}
+
 
 @app.post("/predict/")
 def predict(item: Item):
