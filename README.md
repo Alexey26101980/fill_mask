@@ -30,8 +30,8 @@ __________
 ----
 
 
-  Pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in
-  this paper and first released in this repository. This model, as all ALBERT models, is uncased: it does not make a difference between english and English.
+Pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in 
+this paper and first released in this repository. This model, as all ALBERT models, is uncased: it does not make a difference between english and English.
 
 
    #### Model description
