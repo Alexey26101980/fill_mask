@@ -3,10 +3,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import pipeline
 
-unmasker = pipeline("fill-mask", model="albert-base-v2")
+word_fill = pipeline("fill-mask", model="albert-base-v2")
 
 
-print(unmasker("I am a [MASK].")[0]["sequence"])
+print(word_fill("I am a [MASK].")[0]["sequence"])
 
 
 class Item(BaseModel):
@@ -30,4 +30,4 @@ def predict(item: Item):
     I always get up at 8 o’clock in the morning., We have a flat in London., He plays football every Saturday.,
     She sometimes listens to the radio"""
 
-    return unmasker(item.text)[0]["sequence"]
+    return word_fill(item.text)[0]["sequence"]
